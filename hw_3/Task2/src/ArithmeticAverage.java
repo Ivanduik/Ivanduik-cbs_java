@@ -6,6 +6,11 @@
 //        Який тип змінних краще використовуватиме для коректного показу результату?
 public class ArithmeticAverage {
     public static void main(String[] arg) {
+        int x = 10,y = 12,z = 3;
+        x += y - x++ * z;  //=>x=x+y-x++*z=>x+y=10+12=22=>x*z=10*3=30=>x+1=>22-30=-8
+        //при инкременте і++ , вначале выполняется операция, потом добавляется 1
+        System.out.println("x += y - x++ * z=>x=x+y-x++*z=>x+y(10+12)=22=>x*z(10*3)=30=>x+1=>22-30=-8");
+        System.out.println("x="+x+" y="+y+" z="+z);//x=-8 y=12 z=3
         int rezInt = 0, a = 10, b = 10, c = 10;
         float rezFloat = 0f;
         rezInt = (a + b + c) / 3;
